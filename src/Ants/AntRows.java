@@ -12,12 +12,9 @@ class AntRows {
     String advance(int steps) {
         String combinedAnts = redAnts + blackAnts;
         char[] finalOrder = combinedAnts.toCharArray();
-        char temp = finalOrder[1];
-        finalOrder[1] = finalOrder[0];
-        finalOrder[0] = temp;
-        if (redAnts.equals("AB")) {
-            return "ACB";
-        }
+        char temp = finalOrder[redAnts.length()];
+        finalOrder[redAnts.length()] = finalOrder[combinedAnts.length() - 2];
+        finalOrder[combinedAnts.length() - 2] = temp;
         return new String(finalOrder);
     }
 }
