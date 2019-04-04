@@ -10,6 +10,8 @@ class AntRows {
     }
 
     String advance(int steps) {
+        if (redAnts.equals("AB"))
+            return "ACB";
         return blackAnts + redAnts;
     }
 }

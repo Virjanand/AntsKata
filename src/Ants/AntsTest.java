@@ -11,4 +11,10 @@ class AntsTest {
         AntRows ants = new AntRows("A", "B");
         assertEquals("BA", ants.advance(1));
     }
+
+    @Test
+    void advanceAnts_AB_C_1Step_returnsACB() {
+        AntRows ants = new AntRows("AB", "C");
+        assertEquals("ACB", ants.advance(1));
+    }
 }
