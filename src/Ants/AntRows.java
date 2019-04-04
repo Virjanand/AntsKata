@@ -12,7 +12,6 @@ class AntRows {
     String advance(int steps) {
         String combinedAnts = redAnts + blackAnts;
         char[] finalOrder = combinedAnts.toCharArray();
-        int combinedLength = combinedAnts.length();
             for (int i = 0; i < steps; i++) {
                 swapAnts(finalOrder, redAnts.length() - 1 - i, redAnts.length() - i);
             }
