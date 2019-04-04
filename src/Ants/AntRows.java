@@ -17,10 +17,10 @@ class AntRows {
             swapAnts(finalOrder, redAnts.length() - 1 - i, redAnts.length() - i);
             i++;
         }
-        i = 0;
-        while (blackAnts.length() - 1 - i > 0 && i < steps) {
-            swapAnts(finalOrder, redAnts.length() - i, redAnts.length() + 1 - i);
-            i++;
+        int j = 0;
+        while (blackAnts.length() - 1 - j > 0 && j < steps) {
+            swapAnts(finalOrder, redAnts.length() - j, redAnts.length() + 1 - j);
+            j++;
         }
         if (steps > 2) {
             swapAnts(finalOrder, redAnts.length() - 1, redAnts.length());
