@@ -18,7 +18,7 @@ class AntRows {
             i++;
         }
         int j = 0;
-        while (blackAnts.length() - 1 - j > 0 && j < steps) {
+        while (blackAnts.length() - 1 - j > 0) {
             swapAnts(finalOrder, redAnts.length() - j, redAnts.length() + 1 - j);
             j++;
         }
