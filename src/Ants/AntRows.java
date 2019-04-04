@@ -13,15 +13,19 @@ class AntRows {
         String combinedAnts = redAnts + blackAnts;
         char[] finalOrder = combinedAnts.toCharArray();
         int j = 0;
-        while (blackAnts.length() - 1 - j >= 0 && j < steps) {
+        while (uncheckedAntPositions(j, blackAnts) && j < steps) {
             int i = 0;
-            while (redAnts.length() - 1 - i >= 0 && i < steps - j) {
+            while (uncheckedAntPositions(i, redAnts) && i < steps - j) {
                 swapAnts(finalOrder, redAnts.length() - 1 + j - i, redAnts.length() + j - i);
                 i++;
             }
             j++;
         }
         return new String(finalOrder);
+    }
+
+    private boolean uncheckedAntPositions(int j, String ants) {
+        return ants.length() - 1 - j >= 0;
     }
 
     private void swapAnts(char[] finalOrder, int redAntPosition, int blackAntPosition) {
