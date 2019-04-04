@@ -18,7 +18,7 @@ class AntRows {
                 i++;
             }
         if (blackAnts.length() > 1) {
-            swapAnts(finalOrder, redAnts.length() + 1, redAnts.length());
+            swapAnts(finalOrder, redAnts.length(), redAnts.length() + 1);
         }
         if (steps > 2) {
             swapAnts(finalOrder, 1, 2);
