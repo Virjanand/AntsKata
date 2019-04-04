@@ -14,15 +14,15 @@ class AntRows {
         char[] finalOrder = combinedAnts.toCharArray();
         int combinedLength = combinedAnts.length();
             for (int i = 0; i < steps; i++) {
-                swapAnts(finalOrder, redAnts.length() - i, redAnts.length() - 1 - i);
+                swapAnts(finalOrder, redAnts.length() - 1 - i, redAnts.length() - i);
             }
         if (blackAnts.length() == 2) {
-            swapAnts(finalOrder, 2, 3);
+            swapAnts(finalOrder, 3, 2);
         }
             return new String(finalOrder);
     }
 
-    private void swapAnts(char[] finalOrder, int blackAntPosition, int redAntPosition) {
+    private void swapAnts(char[] finalOrder, int redAntPosition, int blackAntPosition) {
         char temp = finalOrder[blackAntPosition];
         finalOrder[blackAntPosition] = finalOrder[redAntPosition];
         finalOrder[redAntPosition] = temp;
