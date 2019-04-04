@@ -41,4 +41,10 @@ class AntsTest {
         AntRows ants = new AntRows("ABCD", "EFG");
         assertEquals("EAFBGCD", ants.advance(4));
     }
+
+    @Test
+    void advanceAnts_ABC_DEFG_4Steps_returnsDEAFBGC() {
+        AntRows ants = new AntRows("ABC", "DEFG");
+        assertEquals("DEAFBGC", ants.advance(4));
+    }
 }
