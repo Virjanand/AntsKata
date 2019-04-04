@@ -19,9 +19,9 @@ class AntRows {
         return new String(finalOrder);
     }
 
-    private void swapAnts(char[] finalOrder, int redAntPosition, int blackAntPosition2) {
+    private void swapAnts(char[] finalOrder, int redAntPosition, int blackAntPosition) {
         char temp = finalOrder[redAntPosition];
-        finalOrder[redAntPosition] = finalOrder[blackAntPosition2];
-        finalOrder[blackAntPosition2] = temp;
+        finalOrder[redAntPosition] = finalOrder[blackAntPosition];
+        finalOrder[blackAntPosition] = temp;
     }
 }
