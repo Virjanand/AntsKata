@@ -10,7 +10,7 @@ With the given example:
 end
 
 ## ToDo
-- [ ] "A", "B", 1 step -> "BA"
+- [x] "A", "B", 1 step -> "BA"
 - [ ] "AB", "C", 1 step -> "ACB"
 - [ ] "AB", "C", 2 steps -> "CAB"
 - [ ] "AB", "CD", 1 step -> "ACBD"
