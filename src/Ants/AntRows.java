@@ -10,11 +10,14 @@ class AntRows {
     }
 
     String advance(int steps) {
-        if (steps == 2)
-            return "CAB";
         String combinedAnts = redAnts + blackAnts;
         char[] finalOrder = combinedAnts.toCharArray();
         int combinedLength = combinedAnts.length();
+        if (steps == 2) {
+            swapAnts(finalOrder, redAnts.length(), combinedLength - blackAnts.length() - 1);
+            swapAnts(finalOrder, redAnts.length() - 1, combinedLength - blackAnts.length() - 2);
+            return new String(finalOrder);
+        }
         swapAnts(finalOrder, redAnts.length(), combinedLength - blackAnts.length() - 1);
         return new String(finalOrder);
     }
