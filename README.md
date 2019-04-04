@@ -11,7 +11,7 @@ end
 
 ## ToDo
 - [x] "A", "B", 1 step -> "BA"
-- [ ] "AB", "C", 1 step -> "ACB"
+- [x] "AB", "C", 1 step -> "ACB"
 - [ ] "AB", "C", 2 steps -> "CAB"
 - [ ] "AB", "CD", 1 step -> "ACBD"
 - [ ] "AB", "CD", 2 steps -> "CADB"
