@@ -15,4 +15,4 @@ end
 - [x] "AB", "C", 2 steps -> "CAB"
 - [x] "AB", "CD", 1 step -> "ACBD" (no changes needed)
 - [x] "AB", "CD", 2 steps -> "CADB"
-- [ ] "AB", "CD", 3 steps -> "CDAB"
+- [x] "AB", "CD", 3 steps -> "CDAB"
