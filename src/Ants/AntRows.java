@@ -21,7 +21,7 @@ class AntRows {
             swapAnts(finalOrder, redAnts.length(), redAnts.length() + 1);
         }
         if (steps > 2) {
-            swapAnts(finalOrder, 1, 2);
+            swapAnts(finalOrder, redAnts.length() - 1, redAnts.length());
         }
         return new String(finalOrder);
     }
