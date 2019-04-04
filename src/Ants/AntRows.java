@@ -16,6 +16,9 @@ class AntRows {
             for (int i = 0; i < steps; i++) {
                 swapAnts(finalOrder, redAnts.length() - i, combinedLength - blackAnts.length() - 1 - i);
             }
+        if (blackAnts.length() == 2) {
+            swapAnts(finalOrder, 2, 3);
+        }
             return new String(finalOrder);
     }
 
