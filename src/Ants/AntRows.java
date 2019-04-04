@@ -14,9 +14,10 @@ class AntRows {
             return "CAB";
         String combinedAnts = redAnts + blackAnts;
         char[] finalOrder = combinedAnts.toCharArray();
+        int combinedLength = combinedAnts.length();
         char temp = finalOrder[redAnts.length()];
-        finalOrder[redAnts.length()] = finalOrder[combinedAnts.length() - blackAnts.length() - 1];
-        finalOrder[combinedAnts.length() - blackAnts.length() - 1] = temp;
+        finalOrder[redAnts.length()] = finalOrder[combinedLength - blackAnts.length() - 1];
+        finalOrder[combinedLength - blackAnts.length() - 1] = temp;
         return new String(finalOrder);
     }
 }
