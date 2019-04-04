@@ -10,8 +10,14 @@ class AntRows {
     }
 
     String advance(int steps) {
-        if (redAnts.equals("AB"))
+        String combinedAnts = redAnts + blackAnts;
+        char[] finalOrder = combinedAnts.toCharArray();
+        char temp = finalOrder[1];
+        finalOrder[1] = finalOrder[0];
+        finalOrder[0] = temp;
+        if (redAnts.equals("AB")) {
             return "ACB";
-        return blackAnts + redAnts;
+        }
+        return new String(finalOrder);
     }
 }
