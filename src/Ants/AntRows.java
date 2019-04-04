@@ -12,11 +12,11 @@ class AntRows {
     String advance(int steps) {
         String combinedAnts = redAnts + blackAnts;
         char[] finalOrder = combinedAnts.toCharArray();
-        for (int i = 0; i < steps; i++) {
-            if (redAnts.length() - 1 - i >= 0) {
+        int i = 0;
+            while (redAnts.length() - 1 - i >= 0 && i < steps) {
                 swapAnts(finalOrder, redAnts.length() - 1 - i, redAnts.length() - i);
+                i++;
             }
-        }
         if (blackAnts.length() > 1) {
             swapAnts(finalOrder, redAnts.length() + 1, redAnts.length());
         }
