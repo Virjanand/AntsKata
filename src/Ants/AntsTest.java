@@ -29,4 +29,10 @@ class AntsTest {
         AntRows ants = new AntRows("AB", "CD");
         assertEquals("CADB", ants.advance(2));
     }
+
+    @Test
+    void advanceAnts_AB_CD_3Steps_returnsCDAB() {
+        AntRows ants = new AntRows("AB", "CD");
+        assertEquals("CDAB", ants.advance(3));
+    }
 }
