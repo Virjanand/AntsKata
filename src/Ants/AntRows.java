@@ -24,8 +24,8 @@ class AntRows {
         return new String(finalOrder);
     }
 
-    private boolean uncheckedAntPositions(int j, String ants) {
-        return ants.length() - 1 - j >= 0;
+    private boolean uncheckedAntPositions(int index, String ants) {
+        return ants.length() - 1 - index >= 0;
     }
 
     private void swapAnts(char[] finalOrder, int redAntPosition, int blackAntPosition) {
